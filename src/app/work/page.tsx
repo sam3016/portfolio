@@ -36,6 +36,7 @@ async function getWorks() {
 
 export default async function Work() {
   //const works: Data = await getWorks();
+  if (!works) return <div>No Work</div>;
 
   return (
     <>

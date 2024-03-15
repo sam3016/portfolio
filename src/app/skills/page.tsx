@@ -20,6 +20,7 @@ async function getSkills() {
 
 export default async function Skills() {
     //const skills: Data = await getSkills();
+    if (!skills) return <div>No Skills</div>;
 
     return (
         <>

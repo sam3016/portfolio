@@ -29,6 +29,7 @@ async function getCertifications() {
 
 export default async function Certification() {
   //const certifications: Data = await getCertifications();
+  if (!certifications) return <div>No Certification</div>;
 
   return (
     <>
