@@ -26,7 +26,7 @@ type Data = [{
 }]
 
 async function getWorks() {
-  const res = await fetch(process.env.HOST + `/backend/works`);
+  const res = await fetch(`${process.env.HOST}/backend/works`);
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
@@ -36,9 +36,9 @@ async function getWorks() {
   return res.json()
 }
 
-export default async function Work() {
+export default function Work() {
   //const works: Data = await getWorks();
-  if (!works) return <div>No Work</div>;
+  if (!works) return null;
 
   return (
     <>
@@ -50,7 +50,7 @@ export default async function Work() {
               <Card className="h-[350px] min-w-4">
                 <CardHeader>
                   <CardTitle className="text-center">{work?.title}</CardTitle>
-                  { !work?.image ? "" : (
+                  { !work?.image ? null : (
                   <div className="flex flex-row justify-center pt-3">
                     <Image 
                       src={work.image}
@@ -64,7 +64,7 @@ export default async function Work() {
                 </CardHeader>
                 <CardContent className="grid gap-4">
                   <p className="flex-1 space-y-1">{work?.content}</p>
-                  {!work?.github ? "" : (
+                  {!work?.github ? null : (
                     <div className="flex flex-col-1">
                     <span>
                     <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -76,7 +76,7 @@ export default async function Work() {
                     </Link>
                     </div>
                   )}
-                  {!work?.video ? "" : (
+                  {!work?.video ? null : (
                     <div className="flex flex-col-1">
                     <span>
                     <svg width="10px" height="10px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,7 +94,7 @@ export default async function Work() {
                     work?.categories.map((category, index) => (
                         <Badge variant="secondary" className="rounded-full text-sm font-semibold text-gray-700 mr-2" key={index}>{category}</Badge>
                     ))
-                ) : ""}
+                ) : null}
                 </div>
               </Card>
             </div>

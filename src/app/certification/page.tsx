@@ -19,7 +19,7 @@ type Data = [{
 }]
 
 async function getCertifications() {
-  const res = await fetch(process.env.HOST + `/backend/certifications`);
+  const res = await fetch(`${process.env.HOST}/backend/certifications`);
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
@@ -29,9 +29,9 @@ async function getCertifications() {
   return res.json()
 }
 
-export default async function Certification() {
+export default function Certification() {
   //const certifications: Data = await getCertifications();
-  if (!certifications) return <div>No Certification</div>;
+  if (!certifications) return null;
 
   return (
     <>
@@ -50,10 +50,10 @@ export default async function Certification() {
                   <TableCell>{certification?.name}</TableCell>
                   <TableCell>
                     <Image
-                      src={certification?.image ?? "" }
+                      src={certification?.image ?? null }
                       width={200}
                       height={200}
-                      alt={certification?.name ?? "" }
+                      alt={certification?.name ?? null }
                     />
                   </TableCell>
                 </TableRow>

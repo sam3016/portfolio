@@ -10,7 +10,7 @@ type Data = [{
 }]
 
 async function getSkills() {
-    const res = await fetch(process.env.HOST + `/backend/skills`);
+    const res = await fetch(`${process.env.HOST}/backend/skills`);
 
     if (!res.ok) {
       // This will activate the closest `error.js` Error Boundary
@@ -20,9 +20,9 @@ async function getSkills() {
     return res.json()
 }
 
-export default async function Skills() {
+export default function Skills() {
     //const skills: Data = await getSkills();
-    if (!skills) return <div>No Skills</div>;
+    if (!skills) return null;
 
     return (
         <>
