@@ -1,5 +1,5 @@
-// import { skills } from "./skills";
+import { skills } from "./skills";
 
-// export async function GET() {
-//     return Response.json(skills);
-// }
+export async function GET() {
+    return Response.json(skills);
+}

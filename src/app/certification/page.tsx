@@ -25,7 +25,26 @@ import fm16 from "../../../public/certification/certified_16_logo_4clr.jpg";
 import fm18 from "../../../public/certification/certified_18_logo_rev.png";
 import fm2020 from "../../../public/certification/Claris-Developer-Badge-White.png";
 
-const data = [
+type Data = [{
+  id: number;
+  name: string;
+  image: string;
+}]
+
+async function getCertifications() {
+  const res = await fetch(process.env.HOST + `/backend/certifications`);
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch certifications')
+  }
+
+  return res.json()
+}
+
+export default async function Certification() {
+  //const certifications: Data = await getCertifications();
+  const certifications = [
     {
         "name": "FileMaker16: Developer Essentials for FileMaker 16",
         "image": fm16
@@ -92,27 +111,6 @@ const data = [
       "image": az900
     }
 ];
-
-type Data = [{
-  id: number;
-  name: string;
-  image: string;
-}]
-
-// async function getCertifications() {
-//   const res = await fetch(process.env.HOST + `/backend/certifications`);
-
-//   if (!res.ok) {
-//     // This will activate the closest `error.js` Error Boundary
-//     throw new Error('Failed to fetch certifications')
-//   }
-
-//   return res.json()
-// }
-
-export default async function Certification() {
-  //const certifications: Data = await getCertifications();
-  const certifications = data;
 
   return (
     <>

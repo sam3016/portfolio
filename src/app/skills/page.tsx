@@ -17,67 +17,65 @@ type Data = [{
     image: string;
 }]
 
-const data = [
-    {
-        "name": "html",
-        "image": html
-    },
-    {
-        "name": "css",
-        "image": css
-    },
-    {
-        "name": "javascript",
-        "image": javascript
-    },
-    {
-        "name": "react",
-        "image": react
-    },
-    {
-        "name": "nextjs",
-        "image": nextjs
-    },
-    {
-        "name": "tailwind",
-        "image": tailwind
-    },
-    {
-        "name": "github",
-        "image": github
-    },
-    {
-        "name": "node",
-        "image": node
-    },
-    {
-        "name": "mongo",
-        "image": mongo
-    },
-    {
-        "name": "aws",
-        "image": aws
-    },
-    {
-        "name": "firebase",
-        "image": firebase
+async function getSkills() {
+    const res = await fetch(process.env.HOST + `/backend/skills`);
+
+    if (!res.ok) {
+      // This will activate the closest `error.js` Error Boundary
+        throw new Error('Failed to fetch skills')
     }
-];
 
-// async function getSkills() {
-//     const res = await fetch(process.env.HOST + `/backend/skills`);
-
-//     if (!res.ok) {
-//       // This will activate the closest `error.js` Error Boundary
-//         throw new Error('Failed to fetch skills')
-//     }
-
-//     return res.json()
-// }
+    return res.json()
+}
 
 export default async function Skills() {
     //const skills: Data = await getSkills();
-    const skills = data;
+    const skills = [
+        {
+            "name": "html",
+            "image": html
+        },
+        {
+            "name": "css",
+            "image": css
+        },
+        {
+            "name": "javascript",
+            "image": javascript
+        },
+        {
+            "name": "react",
+            "image": react
+        },
+        {
+            "name": "nextjs",
+            "image": nextjs
+        },
+        {
+            "name": "tailwind",
+            "image": tailwind
+        },
+        {
+            "name": "github",
+            "image": github
+        },
+        {
+            "name": "node",
+            "image": node
+        },
+        {
+            "name": "mongo",
+            "image": mongo
+        },
+        {
+            "name": "aws",
+            "image": aws
+        },
+        {
+            "name": "firebase",
+            "image": firebase
+        }
+    ];
 
     return (
         <>
