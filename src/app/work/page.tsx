@@ -27,16 +27,16 @@ type Data = [{
   "categories": [string];
 }]
 
-async function getWorks() {
-  const res = await fetch(process.env.HOST + `/backend/works`);
+// async function getWorks() {
+//   const res = await fetch(process.env.HOST + `/backend/works`);
 
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-      throw new Error('Failed to fetch works')
-  }
+//   if (!res.ok) {
+//     // This will activate the closest `error.js` Error Boundary
+//       throw new Error('Failed to fetch works')
+//   }
 
-  return res.json()
-}
+//   return res.json()
+// }
 
 const data = [
   {

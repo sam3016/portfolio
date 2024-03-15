@@ -64,16 +64,16 @@ const data = [
     }
 ];
 
-async function getSkills() {
-    const res = await fetch(process.env.HOST + `/backend/skills`);
+// async function getSkills() {
+//     const res = await fetch(process.env.HOST + `/backend/skills`);
 
-    if (!res.ok) {
-      // This will activate the closest `error.js` Error Boundary
-        throw new Error('Failed to fetch skills')
-    }
+//     if (!res.ok) {
+//       // This will activate the closest `error.js` Error Boundary
+//         throw new Error('Failed to fetch skills')
+//     }
 
-    return res.json()
-}
+//     return res.json()
+// }
 
 export default async function Skills() {
     //const skills: Data = await getSkills();

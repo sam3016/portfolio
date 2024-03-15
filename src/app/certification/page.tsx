@@ -99,16 +99,16 @@ type Data = [{
   image: string;
 }]
 
-async function getCertifications() {
-  const res = await fetch(process.env.HOST + `/backend/certifications`);
+// async function getCertifications() {
+//   const res = await fetch(process.env.HOST + `/backend/certifications`);
 
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch certifications')
-  }
+//   if (!res.ok) {
+//     // This will activate the closest `error.js` Error Boundary
+//     throw new Error('Failed to fetch certifications')
+//   }
 
-  return res.json()
-}
+//   return res.json()
+// }
 
 export default async function Certification() {
   //const certifications: Data = await getCertifications();
