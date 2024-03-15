@@ -1,10 +1,68 @@
 import Image from "next/image";
+import aws from "../../../public/skills/aws.png";
+import css from "../../../public/skills/css.png";
+import firebase from "../../../public/skills/firebase.png";
+import github from "../../../public/skills/github.png";
+import html from "../../../public/skills/html.png";
+import javascript from "../../../public/skills/javascript.png";
+import mongo from "../../../public/skills/mongo.png";
+import nextjs from "../../../public/skills/nextjs.png";
+import node from "../../../public/skills/node.png";
+import tailwind from "../../../public/skills/tailwind.png";
+import react from "../../../public/skills/react.png";
 
 type Data = [{
     id: number;
     name: string;
     image: string;
 }]
+
+const data = [
+    {
+        "name": "html",
+        "image": html
+    },
+    {
+        "name": "css",
+        "image": css
+    },
+    {
+        "name": "javascript",
+        "image": javascript
+    },
+    {
+        "name": "react",
+        "image": react
+    },
+    {
+        "name": "nextjs",
+        "image": nextjs
+    },
+    {
+        "name": "tailwind",
+        "image": tailwind
+    },
+    {
+        "name": "github",
+        "image": github
+    },
+    {
+        "name": "node",
+        "image": node
+    },
+    {
+        "name": "mongo",
+        "image": mongo
+    },
+    {
+        "name": "aws",
+        "image": aws
+    },
+    {
+        "name": "firebase",
+        "image": firebase
+    }
+];
 
 async function getSkills() {
     const res = await fetch(process.env.HOST + `/backend/skills`);
@@ -18,7 +76,8 @@ async function getSkills() {
 }
 
 export default async function Skills() {
-    const skills: Data = await getSkills();
+    //const skills: Data = await getSkills();
+    const skills = data;
 
     return (
         <>
