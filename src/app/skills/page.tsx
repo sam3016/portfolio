@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { skills } from "../backend/skills/skills";
+//import { skills } from "../backend/skills/skills";
 
 type Data = [{
     id: number;
@@ -18,8 +18,8 @@ async function getSkills() {
     return res.json()
 }
 
-export default function Skills() {
-    //const skills: Data = await getSkills();
+export default async function Skills() {
+    const skills: Data = await getSkills();
     if (!skills) return null;
 
     return (
