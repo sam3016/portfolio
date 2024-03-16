@@ -11,7 +11,7 @@ import {
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link";
 import Image from "next/image";
-import { works } from "../backend/works/works";
+//import { works } from "../backend/works/works";
 
 type Data = [{
   "id": number;
@@ -34,8 +34,8 @@ async function getWorks() {
   return res.json()
 }
 
-export default function Work() {
-  //const works: Data = await getWorks();
+export default async function Work() {
+  const works: Data = await getWorks();
   if (!works) return null;
 
   return (

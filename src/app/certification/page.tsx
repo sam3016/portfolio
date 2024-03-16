@@ -8,7 +8,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import Image from "next/image";
-import { certifications } from "../backend/certifications/certifications";
+//import { certifications } from "../backend/certifications/certifications";
 
 type Data = [{
   id: number;
@@ -27,8 +27,8 @@ async function getCertifications() {
   return res.json()
 }
 
-export default function Certification() {
-  //const certifications: Data = await getCertifications();
+export default async function Certification() {
+  const certifications: Data = await getCertifications();
   if (!certifications) return null;
 
   return (
