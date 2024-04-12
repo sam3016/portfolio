@@ -11,7 +11,7 @@ import {
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link";
 import Image from "next/image";
-//import { works } from "../backend/works/works";
+import { Skeleton } from "@/components/ui/skeleton";
 
 type Data = [{
   "id": number;
@@ -36,7 +36,28 @@ async function getWorks() {
 
 export default async function Work() {
   const works: Data = await getWorks();
-  if (!works) return null;
+  if (!works) return (
+    <>
+      <h1 className="p-4 mt-4 text-4xl text-center font-semibold mb-6">My Works</h1>
+      <div className="lg:grid grid-cols-3 gap-10">
+        {
+          Array.from({ length: 18 }, (v, i) => (
+            <div className="p-1" key={i}>
+              <Card className="h-[350px] min-w-4">
+                <CardHeader>
+                    <Skeleton className="w-50 h-20" />
+                </CardHeader>
+                <CardContent className="grid gap-4">
+                  <Skeleton className="w-50 h-20"/>
+                  <Skeleton className="w-50 h-10"/>
+                </CardContent>
+              </Card>
+            </div>
+          ))
+        }
+      </div>
+    </>
+  );
 
   return (
     <>
@@ -105,7 +126,6 @@ export default async function Work() {
                   )}
                 </div>
               </Card>
-
             </div>
           ))
         }

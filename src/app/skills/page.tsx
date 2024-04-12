@@ -1,11 +1,11 @@
+import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
-//import { skills } from "../backend/skills/skills";
 
 type Data = [{
     id: number;
     name: string;
     image: string;
-}]
+}];
 
 async function getSkills() {
     const res = await fetch(`${process.env.HOST}/backend/skills`);
@@ -20,7 +20,22 @@ async function getSkills() {
 
 export default async function Skills() {
     const skills: Data = await getSkills();
-    if (!skills) return null;
+    if (!skills) return (
+        <>
+            <h1 className="p-4 mt-4 text-4xl text-center font-semibold mb-6">My Skills</h1>
+            <div className="pt-10 flex justify-center items-center h-100">
+                <div className="grid grid-cols-4 gap-20">
+                {
+                        Array.from({ length: 11 }, (v, i) => (
+                            <div key={i} className="flex items-center space-x-4 p-5 w-full">
+                                <Skeleton className="w-48 h-48" />
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </>
+    );
 
     return (
         <>

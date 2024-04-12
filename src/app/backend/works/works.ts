@@ -3,6 +3,7 @@ import biztel from "../../../../public/projects/BizTel.png";
 import media4u from "../../../../public/projects/media4u.png";
 import student from "../../../../public/projects/student.png";
 import contract from "../../../../public/projects/ContractManagement.png";
+import bookshelf from "../../../../public/projects/BookShelf.png";
 
 export const works = [
     {
@@ -157,5 +158,14 @@ export const works = [
         "video": "",
         "github": "",
         "categories": ["FileMaker"]
-    }
+    },
+    {
+        "id": 17,
+        "title": "BookShelf",
+        "content": "A system to manage books I have.",
+        "image": bookshelf,
+        "video": "",
+        "github": "",
+        "categories": ["Next.js", "Firebase", "React"]
+    },
 ];

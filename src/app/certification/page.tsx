@@ -1,3 +1,4 @@
+import { Skeleton } from "@/components/ui/skeleton";
 import {
   Table,
   TableBody,
@@ -8,7 +9,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import Image from "next/image";
-//import { certifications } from "../backend/certifications/certifications";
 
 type Data = [{
   id: number;
@@ -29,7 +29,30 @@ async function getCertifications() {
 
 export default async function Certification() {
   const certifications: Data = await getCertifications();
-  if (!certifications) return null;
+  if (!certifications) {
+    return (
+      <>
+        <h1 className="p-4 mt-4 text-4xl text-center font-semibold mb-6">My Certification</h1>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Certification</TableHead>
+              <TableHead>Badge</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+          {
+            Array.from({ length: 17 }, (v, i) => (
+                <div className="flex items-center space-x-4 p-5 w-full" key={i}>
+                  <Skeleton className="h-20 w-full" />
+                  <Skeleton className="h-20 w-[500px]" />
+                </div>
+            ))}
+          </TableBody>
+          </Table>
+      </>
+    );
+  }
 
   return (
     <>
