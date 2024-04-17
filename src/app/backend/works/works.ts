@@ -166,6 +166,15 @@ export const works = [
         "image": bookshelf,
         "video": "",
         "github": "",
-        "categories": ["Next.js", "Firebase", "React"]
+        "categories": ["Next.js", "Firebase", "React", "Swift"]
+    },
+    {
+        "id": 18,
+        "title": "BookShelf",
+        "content": "A backend created by Go",
+        "image": bookshelf,
+        "video": "",
+        "github": "",
+        "categories": ["Go", "PostgreSQL"]
     },
 ];
