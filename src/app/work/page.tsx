@@ -2,7 +2,6 @@ import * as React from "react";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -12,6 +11,7 @@ import { Badge } from "@/components/ui/badge"
 import Link from "next/link";
 import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 type Data = [{
   "id": number;
@@ -130,6 +130,7 @@ export default async function Work() {
           ))
         }
       </div>
+      <ScrollToTopButton />
     </>
   )
 };

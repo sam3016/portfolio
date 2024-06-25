@@ -1,3 +1,4 @@
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { Skeleton } from "@/components/ui/skeleton";
 import {
   Table,
@@ -82,6 +83,7 @@ export default async function Certification() {
             }
           </TableBody>
         </Table>
+        <ScrollToTopButton />
     </>
   )
 }
