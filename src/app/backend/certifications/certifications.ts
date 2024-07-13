@@ -13,6 +13,7 @@ import fm17 from "../../../../public/certification/fm_17.png";
 import fm16 from "../../../../public/certification/certified_16_logo_4clr.jpg";
 import fm18 from "../../../../public/certification/certified_18_logo_rev.png";
 import fm2020 from "../../../../public/certification/Claris-Developer-Badge-White.png";
+import sa from "../../../../public/certification/2021-03_Badge_SF-Certified_Administrator_High-Res.png";
 
 export const certifications = [
     {
@@ -73,7 +74,7 @@ export const certifications = [
     {
         "id": 12,
         "name": "Salesforce Certified Administrator (SCA)",
-        "image": ""
+        "image": sa
     },
     {
         "id": 13,
