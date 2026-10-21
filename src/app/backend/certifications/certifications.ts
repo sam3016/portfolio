@@ -76,21 +76,21 @@ export const certifications = [
         "name": "Salesforce Certified Administrator (SCA)",
         "image": sa
     },
-    {
-        "id": 13,
-        "name": "Tableau Certified Data Analyst",
-        "image": da
-    },
-    {
-        "id": 14,
-        "name": "Tableau Server Certified Associate",
-        "image": tsa
-    },
-    {
-        "id": 15,
-        "name": "Tableau Certified Associate Consultant",
-        "image": tcc
-    },
+    // {
+    //     "id": 13,
+    //     "name": "Tableau Certified Data Analyst",
+    //     "image": da
+    // },
+    // {
+    //     "id": 14,
+    //     "name": "Tableau Server Certified Associate",
+    //     "image": tsa
+    // },
+    // {
+    //     "id": 15,
+    //     "name": "Tableau Certified Associate Consultant",
+    //     "image": tcc
+    // },
     {
         "id": 16,
         "name": "Microsoft Certified: Azure Fundamentals",

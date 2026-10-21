@@ -15,19 +15,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <ThemeProvider
+    <html lang="en" suppressHydrationWarning={true}>
+        <body className="min-h-screen flex flex-col">
+          <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
       >
-        <body className="min-h-screen">
           <Header />
-          {children}
+          <main className="flex-1">{children}</main>
+          <Footer />
+          </ThemeProvider>
         </body>
-        <Footer />
-      </ThemeProvider>
     </html>
   );
 }
