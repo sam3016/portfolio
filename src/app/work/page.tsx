@@ -108,7 +108,7 @@ export default async function Work() {
                 type="button"
                 className="flex items-center gap-2 px-4 py-2 font-sans text-xs font-bold uppercase text-gray-900 rounded-lg transition-all select-none hover:bg-gray-900/10 active:bg-gray-900/20 dark:bg-white dark:hover:bg-slate-400"
               >
-                GitHub
+                Repopository
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-4 h-4">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                 </svg>
