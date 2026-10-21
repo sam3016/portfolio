@@ -170,7 +170,7 @@ export const works = [
     },
     {
         "id": 18,
-        "title": "BookShelf",
+        "title": "BookShelf(Backend)",
         "content": "A backend created by Go",
         "image": bookshelf,
         "video": "",
