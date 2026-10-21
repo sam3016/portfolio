@@ -106,7 +106,7 @@ export default async function Work() {
             <Link href={work.github} className="inline-block">
               <button
                 type="button"
-                className="flex items-center gap-2 px-4 py-2 font-sans text-xs font-bold uppercase text-gray-900 rounded-lg transition-all select-none hover:bg-gray-900/10 active:bg-gray-900/20 dark:bg-white dark:hover:bg-slate-400"
+                className="flex items-center gap-2 px-4 py-2 font-sans text-xs font-bold uppercase text-gray-700 bg-gray-100 rounded-lg transition-all select-none hover:bg-gray-200 active:bg-gray-300 dark:bg-white dark:hover:bg-slate-400"
               >
                 Repopository
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-4 h-4">
@@ -119,7 +119,7 @@ export default async function Work() {
             <Link href={work.video} className="inline-block">
               <button
                 type="button"
-                className="flex items-center gap-2 px-4 py-2 font-sans text-xs font-bold uppercase text-gray-900 rounded-lg transition-all select-none hover:bg-gray-900/10 active:bg-gray-900/20 dark:bg-white dark:hover:bg-slate-400"
+                className="flex items-center gap-2 px-4 py-2 font-sans text-xs font-bold uppercase text-gray-700 bg-gray-100 rounded-lg transition-all select-none hover:bg-gray-200 active:bg-gray-300 dark:bg-white dark:hover:bg-slate-400"
               >
                 Video
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-4 h-4">
