@@ -50,6 +50,7 @@ export default async function Skills() {
                                 height={100}
                                 alt={skill.name}
                                 key={index}
+                                style={{ width: "auto", height: "auto" }}
                             />
                         ))
                     }

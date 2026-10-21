@@ -71,10 +71,11 @@ export default async function Certification() {
                   <TableCell>{certification?.name}</TableCell>
                   <TableCell>
                     <Image
-                      src={certification?.image ?? null }
+                      src={certification?.image}
                       width={200}
                       height={200}
-                      alt={certification?.name ?? null }
+                      alt={certification.name ?? ""}
+                      style={{ width: "auto", height: "auto" }}
                     />
                   </TableCell>
                 </TableRow>

@@ -4,9 +4,9 @@ import fmsa from "../../../../public/certification/claris-filemaker-server-admin
 import ccs from "../../../../public/certification/app-developer-for-claris-connect-specialist.png";
 import fmpa from "../../../../public/certification/app-developer-for-claris-filemaker-pro-associate.png";
 import cca from "../../../../public/certification/app-developer-for-claris-connect-associate.png";
-import tsa from "../../../../public/certification/tableau-server-certified-associate.png";
-import da from "../../../../public/certification/tableau-certified-data-analyst.1.png";
-import tcc from "../../../../public/certification/tableau-certified-consultant.1.png";
+// import tsa from "../../../../public/certification/tableau-server-certified-associate.png";
+// import da from "../../../../public/certification/tableau-certified-data-analyst.1.png";
+// import tcc from "../../../../public/certification/tableau-certified-consultant.1.png";
 import az900 from "../../../../public/certification/microsoft-certified-azure-fundamentals.png";
 import defmp from "../../../../public/certification/developer-essentials-for-claris-filemaker.png";
 import fm17 from "../../../../public/certification/fm_17.png";

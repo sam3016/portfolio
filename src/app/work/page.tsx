@@ -76,6 +76,7 @@ export default async function Work() {
                       width={200}
                       height={200}
                       alt={work?.title}
+                      style={{ width: "auto", height: "auto" }}
                     />
                   </div>
                   
