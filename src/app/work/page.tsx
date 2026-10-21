@@ -60,8 +60,9 @@ export default async function Work() {
 
   return (
     <>
-      <h1 className="p-4 mt-4 text-4xl text-center font-semibold mb-6">My Works</h1>
-      <div className="lg:grid grid-cols-3 gap-10">
+      <div className="px-6 md:px-10 lg:px-16 pb-10">
+    <h1 className="p-4 mt-4 text-4xl text-center font-semibold mb-6">My Works</h1>
+    <div className="lg:grid grid-cols-3 gap-10">
         {
           works.map((work, index) => (
   <div className="p-1" key={index}>
@@ -136,6 +137,7 @@ export default async function Work() {
         }
       </div>
       <ScrollToTopButton />
+      </div>
     </>
   )
 };
